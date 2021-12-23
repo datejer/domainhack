@@ -6,9 +6,9 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className={styles.container}>
       <Header />
-      <main className={styles.content}>
-        <div>{children}</div>
-      </main>
+      <div className={styles.wrapper}>
+        <main className={styles.content}>{children}</main>
+      </div>
       <Footer />
     </div>
   );

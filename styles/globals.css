@@ -1,6 +1,15 @@
 :root {
-  --foreground: #fff;
-  --background: #000;
+  --background: #000000;
+  --foreground: #ffffff;
+  --foreground-secondary: #ffffff66;
+
+  --red: #eb3b5a;
+  --green: #20bf6b;
+  --blue: #4b7bec;
+
+  --red-washed: #eb3b5a88;
+  --green-washed: #20bf6b88;
+  --blue-washed: #4b7bec88;
 }
 
 html,

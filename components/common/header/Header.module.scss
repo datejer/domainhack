@@ -8,4 +8,12 @@
   font-weight: 400;
   text-align: center;
   margin: 0;
+
+  @media screen and (max-width: 550px) {
+    font-size: 4rem;
+  }
+
+  @media screen and (max-width: 350px) {
+    font-size: 3rem;
+  }
 }

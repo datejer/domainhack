@@ -1,0 +1,92 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input {
+  color: var(--foreground);
+  font-family: inherit;
+  font-size: 1.25rem;
+  background-color: inherit;
+  border: 2px solid var(--foreground-secondary);
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  transition: border-color 0.2s ease-in-out;
+
+  &:focus {
+    outline: none;
+    border-color: var(--foreground);
+  }
+}
+
+.result {
+  margin: 1rem 0;
+  border-spacing: 0;
+
+  th {
+    text-align: left;
+  }
+
+  tr:nth-child(even) {
+    background-color: #ffffff11;
+  }
+
+  td {
+    padding-right: 1.5rem;
+  }
+
+  @media screen and (max-width: 600px) {
+    thead {
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+
+    tr {
+      display: block;
+      padding: 0.5rem 0;
+    }
+
+    td {
+      display: block;
+      font-size: 1em;
+      padding: 0 0 0 0.5rem;
+    }
+
+    .number::before {
+      content: "#";
+    }
+  }
+}
+
+.type,
+.sponsor,
+.number {
+  color: var(--foreground-secondary);
+}
+
+.name {
+  color: var(--blue);
+}
+
+.dot {
+  color: var(--red-washed);
+}
+
+.tld {
+  color: var(--red);
+}
+
+.slash {
+  color: var(--green-washed);
+}
+
+.dir {
+  color: var(--green);
+}

@@ -4,8 +4,12 @@
   height: 100%;
 }
 
+.wrapper {
+  flex: 1;
+  padding: 0 2rem;
+}
+
 .content {
   max-width: 56rem;
   margin: 0 auto;
-  flex: 1;
 }
