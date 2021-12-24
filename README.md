@@ -10,7 +10,7 @@ A domain hack is a unique domain name that uses the TLD to create a word or sent
 ![TypeScript](https://img.shields.io/badge/TypeScript-%233178C6?logo=typescript&logoColor=white)
 ![SCSS](https://img.shields.io/badge/Sass-%23CC6699?logo=sass&logoColor=white)
 ![Vercel](https://vercelbadge.vercel.app/api/datejer/domainhack)
-![Website](https://img.shields.io/website?url=https%3A%2F%2Fdomainhack.vercel.app)
+![Website](https://img.shields.io/website?url=https%3A%2F%2Fdomainhack.ejer.gq)
 
 ## Ingredients
 
@@ -44,7 +44,7 @@ $ yarn build
 
 ## How to deploy
 
-Deployed using ▲ Vercel at [domainhack.vercel.app](https://domainhack.vercel.app/)
+Deployed using ▲ Vercel at [domainhack.ejer.gq](https://domainhack.ejer.gq/)
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fdatejer%2Fdomainhack)
 
