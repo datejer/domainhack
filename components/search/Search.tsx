@@ -2,22 +2,23 @@ import React, { useState, useCallback } from "react";
 import debounce from "lodash.debounce";
 import { Domain } from "../../lib/types";
 import styles from "./Search.module.scss";
+import { extractMatches } from "../../lib/domains/extractMatches";
+import { generateHacks } from "../../lib/domains/generateHacks";
 
 export const Search = () => {
   const [input, setInput] = useState("");
-  const [result, setResult] = useState([]);
+  const [result, setResult] = useState<Domain[]>([]);
 
   const doSearch = (value: string) => {
-    if (value.trim() !== "")
-      fetch(`/api/domains?input=${value.replace(/\s/g, "")}`)
-        .then((res) => res.json())
-        .then((res) => {
-          setResult(res);
-        });
+    if (value.trim() !== "") {
+      const matches = extractMatches(value.replace(/\s/g, ""));
+      const domains = generateHacks(matches, value.replace(/\s/g, ""));
+      setResult(domains as Domain[]);
+    }
   };
 
   const debouncedSearch = useCallback(
-    debounce((value) => doSearch(value), 1000),
+    debounce((value) => doSearch(value), 100),
     [],
   );
 
