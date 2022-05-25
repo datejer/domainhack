@@ -1,5 +1,6 @@
 :root {
   --background: #000000;
+  --background-secondary: #212121;
   --foreground: #ffffff;
   --foreground-secondary: #ffffff77;
   --foreground-tertiary: #ffffff55;
@@ -36,4 +37,20 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+code {
+  background-color: var(--background-secondary);
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+  color: var(--foreground);
+  display: block;
+  max-width: max-content;
+  white-space: nowrap;
+  overflow: scroll;
+  overflow-y: hidden;
+  overflow-x: auto;
 }
