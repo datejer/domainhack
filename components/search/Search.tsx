@@ -4,17 +4,18 @@ import { Domain } from "../../lib/types";
 import styles from "./Search.module.scss";
 import { extractMatches } from "../../lib/domains/extractMatches";
 import { generateHacks } from "../../lib/domains/generateHacks";
+import { sanitizeInput } from "../../lib/domains/sanitizeInput";
 
 export const Search = () => {
   const [input, setInput] = useState("");
   const [result, setResult] = useState<Domain[]>([]);
 
   const doSearch = (value: string) => {
-    if (value.trim() !== "") {
-      const matches = extractMatches(value.replace(/\s/g, ""));
-      const domains = generateHacks(matches, value.replace(/\s/g, ""));
-      setResult(domains as Domain[]);
-    }
+    const sanitized = sanitizeInput(value);
+    const matches = extractMatches(sanitized);
+    const domains = generateHacks(matches, sanitized);
+
+    setResult(domains as Domain[]);
   };
 
   const debouncedSearch = useCallback(
